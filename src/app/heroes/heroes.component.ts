@@ -1,3 +1,4 @@
+import { isNull } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 import { HEROES } from '../mock-heroes';
@@ -16,7 +17,7 @@ export class HeroesComponent implements OnInit {
     name: 'Windstorm'
   };
 
-  selectedHero:Hero=this.hero;
+  selectedHero:any;
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
